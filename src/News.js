@@ -1,11 +1,12 @@
 import React from 'react'
 
-function News({title,description,imageurl}) {
+function News({title,description,imageurl,urlinfo}) {
     return (
-        <div>
+        <div className="news">
             <h1>{title}</h1>
-            <p>{description}</p>
-            <img src={imageurl} alt=""/>
+            <p>{description}<a href={urlinfo} target="_blank">Learn more.</a></p>
+            <img src={imageurl} width="500" alt=""/>
+
         </div>
     )
 }
